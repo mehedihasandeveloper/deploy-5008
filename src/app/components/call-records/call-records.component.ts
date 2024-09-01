@@ -93,7 +93,7 @@ export class CallRecordsComponent implements OnInit {
 
     const fullPath = `${folderName}/${fileName}`;
     const encodedPath = encodeURIComponent(fullPath);
-    window.open(`http://localhost:8080/download-mp3?fileName=${encodedPath}`);
+    window.open(`http://43.231.78.77:5010/download-mp3?fileName=${encodedPath}`);
   }
 
   // playFile(fileName: string): void {
@@ -133,7 +133,7 @@ export class CallRecordsComponent implements OnInit {
       folderName = this.currentDate;
     }
     const fullPath = `${folderName}/${fileName}`;
-    this.audioSource = `http://localhost:8080/download-mp3?fileName=${encodeURIComponent(fullPath)}`;
+    this.audioSource = `http://43.231.78.77:5010/download-mp3?fileName=${encodeURIComponent(fullPath)}`;
 
     const modalElement = document.getElementById('exampleModal');
     if (modalElement) {

@@ -1,0 +1,41 @@
+<!-- <h1 class="h3 mb-4 text-gray-800" style="margin-left: 95px;">User Management</h1> -->
+<div class="container styleBody">
+    <div class="card shadow mb-4 mt-3">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold" style="color: #36454F;">Create Client User</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                    <form (ngSubmit)="onSubmit()" #signUpForm="ngForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="username"
+                                placeholder="Username" name="username" [(ngModel)]="user.username" required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <input type="password" class="form-control" id="InputPassword"
+                                placeholder="Password" name="password" [(ngModel)]="user.password" required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <input type="email" class="form-control" id="email"
+                                placeholder="Email" name="email" [(ngModel)]="user.email">
+                        </div>
+                        <div class="form-group mt-3">
+                            <input type="text" class="form-control" id="firstName"
+                                placeholder="First Name" name="firstName" [(ngModel)]="user.userFirstName" required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <input type="text" class="form-control" id="lastName"
+                                placeholder="Last Name" name="lastName" [(ngModel)]="user.userLastName" >
+                        </div>
+                        <div style="display: flex; justify-content: end;">
+                            <button type="submit" class="btn mt-3"
+                                style="background-color:#36454f;color: #FFFFFA;">Create User</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

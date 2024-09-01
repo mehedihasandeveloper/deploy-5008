@@ -1,0 +1,47 @@
+<div id="mySidebar" class="sidebar" *ngIf="isLoggedIn">
+  <div *ngIf="isClient">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">×</a>
+    <a [routerLink]="'/userManagement'">User Management</a>
+    <a [routerLink]="'/callRecords'">Call Records</a>
+    <a [routerLink]="'/changePass'">FTP Login Management</a>
+    <!-- <a [routerLink]="'/clientQCComments'">Client QC Comments</a> -->
+    <a [routerLink]="'/campaignPermission'">Campaign Permission</a>
+  </div>
+
+  <div *ngIf="isAdmin">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">×</a>
+    <a [routerLink]="'/clientCallRecords'">Call Records</a>
+  </div>
+  
+
+</div>
+<div id="main">
+  <nav class="navbar navbar-expand-lg navbar-light shadow mb-5" *ngIf="isLoggedIn">
+    <div class="container-fluid">
+      <div class="d-flex justify-content-between w-100 align-items-center">
+
+        <button class="openbtn" (click)="openNav()">☰</button>
+        <em *ngIf="isClient">  <span class="fw-bold text-uppercase" style="font-size: 18px;" >Admin Panel</span></em>
+        <em *ngIf="isAdmin"> <span class="fw-bold text-uppercase" style="font-size: 18px;" >Client Panel</span></em>
+
+        <ul class="navbar-nav d-flex align-items-center mb-0">
+
+          <li class="nav-item me-3 me-lg-0 dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-user"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" (click)="logOut()">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="" style="background-color: linear-gradient(#1E2022, #52616B)"
+    [ngClass]="{'main-logged-in': isLoggedIn, 'main-full': !isLoggedIn}">
+    <router-outlet />
+  </div>
+
+</div>

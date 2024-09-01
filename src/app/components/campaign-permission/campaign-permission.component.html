@@ -1,0 +1,36 @@
+<div class="container styleBody">
+    <div class="card shadow mb-4 mt-3">
+      <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold" style="color: #36454F;">Campaign Permission</h6>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+            <!-- Bind the form to the component -->
+            <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  
+              <!-- Dropdown with default "Select User" option -->
+              <div class="form-group">
+                <select class="form-select" aria-label="Default select example" formControlName="username">
+                  <option [value]="''">Select User</option>
+                  <option *ngFor="let username of usernames" [value]="username">{{ username }}</option>
+                </select>
+              </div>
+  
+              <!-- Campaign Name Input -->
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" id="campaignName" placeholder="Campaign Name" formControlName="campaignName">
+              </div>
+  
+              <!-- Submit Button -->
+              <div style="display: flex; justify-content: end;">
+                <button type="submit" class="btn mt-3"
+                  style="background-color: #36454f; color: #FFFFFA;">Allow</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

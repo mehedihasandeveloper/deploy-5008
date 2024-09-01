@@ -1,0 +1,50 @@
+<div class="login-parent">
+    <div class="wrapper">
+        <div class="form-wrapper sign-up">
+            <form [formGroup]="adminLoginForm" (ngSubmit)="onAdminSubmit()">
+                <div class="logo-container">
+                    <img src="transparent_logo.png" alt="Fifo Tech Logo" class="logo">
+                </div>
+                <h2>Login as Admin</h2>
+                <div class="alert alert-danger" role="alert" *ngIf="errorMessage">
+                    {{ errorMessage }}
+                  </div>
+                  
+                  <div class="input-group">
+                    <input type="text" formControlName="username" required />
+                    <label>Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" formControlName="password" required />
+                    <label>Password</label>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="sign-link">
+                    <p>Are you a user? <a href="#" class="signIn-link">Login as User </a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-wrapper sign-in">
+            <form [formGroup]="clientLoginForm" (ngSubmit)="onClientSubmit()">
+                <div class="logo-container">
+                    <img src="transparent_logo.png" alt="Fifo Tech Logo" class="logo">
+                </div>
+                <h2>Login as User</h2>
+                <div class="input-group">
+                    <input type="text" formControlName="username" required />
+                    <label>Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" formControlName="password" required />
+                    <label>Password</label>
+                </div>
+
+                <button type="submit" class="btn">Login</button>
+                <div class="sign-link">
+                    <p>Are you an Admin? <a href="#" class="signUp-link">Login as Admin</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

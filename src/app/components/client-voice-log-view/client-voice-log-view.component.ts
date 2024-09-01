@@ -238,42 +238,42 @@ export class ClientVoiceLogViewComponent implements OnInit {
 
 
 
-  openModal(file: any) {
-    console.log('Opening modal with file:', file); // Debugging line
-    this.audioSource = file.fileName; 
-    this.selectedFile = file; 
-    this.comment = ''; 
-  }
+  // openModal(file: any) {
+  //   console.log('Opening modal with file:', file); // Debugging line
+  //   this.audioSource = file.fileName; 
+  //   this.selectedFile = file; 
+  //   this.comment = ''; 
+  // }
   
   
-  postComment(): void {
-    console.log('Selected file:', this.selectedFile);
-    console.log('Comment:', this.comment);
+  // postComment(): void {
+  //   console.log('Selected file:', this.selectedFile);
+  //   console.log('Comment:', this.comment);
   
-    if (!this.comment || !this.selectedFile) {
-      console.error('Comment or file details are missing');
-      return;
-    }
+  //   if (!this.comment || !this.selectedFile) {
+  //     console.error('Comment or file details are missing');
+  //     return;
+  //   }
   
-    const commentData = {
-      fileName: this.selectedFile.fileName,
-      dateTime: this.selectedFile.dateTime,
-      phoneNumber: this.selectedFile.phoneNumber,
-      campaignName: this.selectedFile.campaignName,
-      agentId: this.selectedFile.agentId,
-      duration: this.selectedFile.formattedDuration,
-      comment: this.comment
-    };
+  //   const commentData = {
+  //     fileName: this.selectedFile.fileName,
+  //     dateTime: this.selectedFile.dateTime,
+  //     phoneNumber: this.selectedFile.phoneNumber,
+  //     campaignName: this.selectedFile.campaignName,
+  //     agentId: this.selectedFile.agentId,
+  //     duration: this.selectedFile.formattedDuration,
+  //     comment: this.comment
+  //   };
   
-    this.mp3FileService.saveComment(commentData).subscribe(
-      response => {
-        console.log('Comment saved successfully', response);
-      },
-      error => {
-        console.error('Error saving comment', error);
-      }
-    );
-  }
-  selectedFile: any; // Selected file details
-  comment: string = ''; // Comment from textarea
+  //   this.mp3FileService.saveComment(commentData).subscribe(
+  //     response => {
+  //       console.log('Comment saved successfully', response);
+  //     },
+  //     error => {
+  //       console.error('Error saving comment', error);
+  //     }
+  //   );
+  // }
+  // selectedFile: any; // Selected file details
+  // comment: string = ''; // Comment from textarea
 }

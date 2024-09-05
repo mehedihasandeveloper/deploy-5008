@@ -10,13 +10,13 @@ import { CampaignPermissionComponent } from './components/campaign-permission/ca
 
 const routes: Routes = [
   {path:'callRecords', component: CallRecordsComponent},
-  {path: '', component: LoginPageComponent},
   {path:'userManagement', component: UserManagementComponent},
   {path:'login', component: LoginPageComponent},
   {path:'changePass', component: FtpLoginManagementComponent},
   {path:'clientCallRecords', component: ClientVoiceLogViewComponent},
   {path:'clientQCComments', component: ClientQCCommentComponent},
   {path:'campaignPermission', component: CampaignPermissionComponent},
+  {path: '', component: LoginPageComponent},
 ];
 
 @NgModule({

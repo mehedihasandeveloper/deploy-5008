@@ -58,5 +58,6 @@ export class AppComponent implements OnInit {
     // this.route.navigateByUrl('login');
     this.storageService.clean();
     window.location.reload();
+    this.route.navigateByUrl('login');
   }
 }

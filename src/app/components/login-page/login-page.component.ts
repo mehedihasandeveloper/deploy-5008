@@ -49,7 +49,7 @@ export class LoginPageComponent implements OnInit {
         this.roles = this.storageService.getUser().roles;
         this.campaignName = localStorage.getItem('campaignName');
       }else{
-        this.route.navigateByUrl('');
+        // this.route.navigateByUrl('');
       }
     
       

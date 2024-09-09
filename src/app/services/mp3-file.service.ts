@@ -41,10 +41,10 @@ export class Mp3FileService {
   // private url = 'http://voicelog.fifo-tech.com:5010';
   // private FTPLogin = 'http://voicelog.fifo-tech.com:5010/api/FTPLogin/editFTPLogin';
 
-   private apiUrl = 'http://voicelog.fifo-tech.com/list-mp3-files'; 
-  private apiUrlFilter = 'http://voicelog.fifo-tech.com/list-mp3-files-by-filter';
-  private url = 'http://voicelog.fifo-tech.com';
-  private FTPLogin = 'http://voicelog.fifo-tech.com/api/FTPLogin/editFTPLogin';
+   private apiUrl = 'https://voicelog.fifo-tech.com/list-mp3-files'; 
+  private apiUrlFilter = 'https://voicelog.fifo-tech.com/list-mp3-files-by-filter';
+  private url = 'https://voicelog.fifo-tech.com';
+  private FTPLogin = 'https://voicelog.fifo-tech.com/api/FTPLogin/editFTPLogin';
 
   constructor(private http: HttpClient) { }
 

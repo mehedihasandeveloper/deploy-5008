@@ -93,7 +93,7 @@ export class CallRecordsComponent implements OnInit {
 
     const fullPath = `${folderName}/${fileName}`;
     const encodedPath = encodeURIComponent(fullPath);
-    window.open(`http://43.231.78.77:5010/download-mp3?fileName=${encodedPath}`);
+    window.open(`https://voicelog.fifo-tech.com/download-mp3?fileName=${encodedPath}`);
   }
 
   // playFile(fileName: string): void {

@@ -133,7 +133,7 @@ export class CallRecordsComponent implements OnInit {
       folderName = this.currentDate;
     }
     const fullPath = `${folderName}/${fileName}`;
-    this.audioSource = `http://43.231.78.77:5010/download-mp3?fileName=${encodeURIComponent(fullPath)}`;
+    this.audioSource = `https://voicelog.fifo-tech.com/download-mp3?fileName=${encodeURIComponent(fullPath)}`;
 
     const modalElement = document.getElementById('exampleModal');
     if (modalElement) {
